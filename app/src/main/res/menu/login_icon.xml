@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/whenLoggedIn"
+        android:icon="@drawable/user_large"
+        android:title="Logged In"
+        android:titleCondensed="@string/app_name"
+        android:tooltipText="Logged In"
+        app:showAsAction="always" />
+
+</menu>

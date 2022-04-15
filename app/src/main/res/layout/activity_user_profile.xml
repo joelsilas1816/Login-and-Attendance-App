@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UserProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:layout_margin="3dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/jscoe_image"
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:paddingBottom="50dp"
+        android:background="@color/purple_700"
+        android:padding="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/user_large"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:fontFamily="@font/bigshot_one"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:text="Name of user" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/full_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:fontFamily="@font/amarante"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="Username of user" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="-64dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/purple_500"
+            app:cardElevation="100dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/jscoe_logo1" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="70dp"
+            android:layout_height="120dp"
+            android:textStyle="bold"
+            app:cardBackgroundColor="@color/purple_500"
+            app:cardElevation="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Department of Computer Engineering"
+                android:fontFamily="@font/bigshot_one"
+                android:textColor="@color/white"
+                android:textSize="19sp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            app:cardBackgroundColor="@color/purple_500"
+            app:cardElevation="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/jscoe_logo2"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:paddingStart="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/nameicon"
+                app:startIconTint="@color/black"
+                app:endIconMode="clear_text"
+                android:hint="@string/full_name"
+                app:boxBackgroundColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:helperText="Please enter a 10 digit phone number"
+                android:hint="@string/phone_number"
+                app:startIconDrawable="@drawable/phoneicon"
+                app:boxBackgroundColor="@color/white"
+                app:startIconTint="@color/black"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdgeLength="10dp"
+                    android:inputType="number"
+                    android:digits="1234567890"
+                    android:maxLength="10"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_id"
+                app:endIconMode="clear_text"
+                app:boxBackgroundColor="@color/white"
+                app:startIconDrawable="@drawable/emailicon"
+                app:startIconTint="@color/black">
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:boxBackgroundColor="@color/white"
+                app:startIconDrawable="@drawable/passwordicon"
+                app:startIconTint="@color/black"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".UserProfile">
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Exit"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/markAttendance"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/markAttendance"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:text="Mark Attendance"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
+            android:textStyle="bold"
+            android:onClick="settingUp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/updateButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/exitButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Update Details"
+            android:onClick="updateTheValues"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/markAttendance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+</ScrollView>
